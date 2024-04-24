@@ -19,6 +19,10 @@ describe('Cypress basics', () => {
 
         cy.title().then(title => {
             console.log(title)
+        })
+
+        cy.title().then(title => {
+            console.log(title)
 
             cy.get('#formNome').type(title)
 
