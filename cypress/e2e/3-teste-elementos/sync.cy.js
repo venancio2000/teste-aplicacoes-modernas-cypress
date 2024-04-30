@@ -50,10 +50,18 @@ describe('Esperas...', () => {
         cy.get("#Lista li span", {timeout: 3000})
             .should('have.length', 2)
     })
-    it.only('click rerty', () => {
+    it('click rerty', () => {
         cy.get('#buttonCount')
             .click()
             .click()
             .should('have.value', "111")
+    })
+    it.only('Should vs Then', () => {
+        cy.get('#buttonListDOM').then($el =>{
+            //.should('have.length', 1)
+            //console.log($el)
+            expect($el).to.have.length(1)
+            cy.get('#buttonList')
+        })
     })
 })
