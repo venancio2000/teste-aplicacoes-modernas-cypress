@@ -17,8 +17,14 @@ describe('Cypress basics', () => {
 
         let syncTitle
 
+
+
+        //escreve o log em um campo de texto
         cy.title().then(title => {
             console.log(title)
+
+            cy.get('#formNome').type(title)
+
         })
 
         cy.title().then(title => {
